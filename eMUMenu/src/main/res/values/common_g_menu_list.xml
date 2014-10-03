@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    '*' Makes an item bold and underlined
+    '#' Makes an item subtext
+    '$' Makes an item align to the right
+    You MUST use '-' in front of each
+    -->
+
+    <string-array name="drinks">
+        <item>*House Specials-#Any prices unspecified:\nSmall  $3.25\nLarge  $3.90</item>
+        <item>Ground Shaker-#(espresso, caramel, vanilla ice cream)</item>
+        <item>Indian Elephant-#(chai, vanilla ice cream, nutmeg, cinnamon)</item>
+        <item>Valley Turnpike-#(apple juice, caramel, cinnamon, vanilla ice cream)</item>
+        <item>Salty Caramel-#(vanilla ice cream, caramel, salt)</item>
+        <item>Siberian Tiger-#(vanilla ice cream, espresso, chai, cayenne pepper)</item>
+        <item>Nutty Professor-#(vanilla ice cream, espresso, Reese\'s)</item>
+        <item>Flying Squirrel-#(vanilla ice cream, hazel syrup, espresso)</item>
+        <item>London Fog-#(earl grey, vanilla syrup)-$Small $2.60\nLarge $2.85</item>
+        <item>Sweet Africa-#(African Nectar, vanilla syrup)-$Small $2.60\nLarge $2.85</item>
+        <item>Dirty Chai-#(espresso, chai)-$Small $3.35\nLarge $3.65</item>
+        <item>*Hot Drinks</item>
+        <item>Coffee in House-#(unlimited refills)-$$2.10</item>
+        <item>Coffee-$Small $1.60\nLarge $1.90</item>
+        <item>Latte-$Small $3.00\nLarge $3.35</item>
+        <item>Cappuccino-$Small $3.00\nLarge $3.35</item>
+        <item>Mocha-$Small $3.35\nLarge $3.65</item>
+        <item>Cafe Au Lait-$Small $1.85</item>
+        <item>Americano-$Small $1.85</item>
+        <item>Macchiato-$Small $2.10</item>
+        <item>Steamer-$Small $1.90\nLarge $2.20</item>
+        <item>Espresso-$Single Shot $1.75\nDouble Shot $2.00\nExtra Shot $0.75</item>
+        <item>Tea-$Small $1.25\nLarge $1.75</item>
+        <item>Tea Steamer-$Small $2.60\nLarge $2.85</item>
+        <item>Chai-$Small $2.60\nLarge $2.85</item>
+        <item>Hot Chocolate-$Small $2.20\nLarge $2.50</item>
+        <item>*Cold Drinks</item>
+        <item>Iced Coffee-$Small $1.80\nLarge $2.10</item>
+        <item>Frapuccino-$Small $2.50\nLarge $3.00</item>
+        <item>Iced Chai-$Small $2.85\nLarge $3.10</item>
+        <item>Soda Float-$$2.00</item>
+        <item>Coffee Float-$$1.75</item>
+        <item>Milk-$$1.15</item>
+        <item>Soy Milk-$$1.15</item>
+        <item>Soft Drinks - can-#(coke, diet coke, mountain dew, root beer, dr. pepper)-$$0.75</item>
+        <item>Soft Drinks - jarritos-#(pineapple, mandarin, mango, sangria)-$$1.25</item>
+        <item>Red Bull-$$2.00</item>
+        <item>Menno Tea-$$2.00</item>
+        <item>Juice-$$1.15</item>
+        <item>Bottled Water-$$1.00</item>
+    </string-array>
+    <string-array name="food">
+        <item>*Baked Goods</item>
+        <item>Bagel-$$1.60</item>
+        <item>Muffin-$$1.85</item>
+        <item>Scone-$$1.85</item>
+        <item>Cinnamon Roll-$$1.85</item>
+        <item>Granola Bar-$$1.75</item>
+        <item>*Sandwiches-#All Sandwiches $3.75</item>
+        <item>Basic \'burg</item>
+        <item>Italian</item>
+        <item>Californian</item>
+        <item>Veggie Hero</item>
+    </string-array>
+    <string-array name="combos_snacks">
+        <item>*Combos</item>
+        <item>Bakery Combo-#(pair any baked good with house coffee, tea, juice, or milk)-$$2.95</item>
+        <item>Sandwich Combo-#(sandwich, side, &amp; drink)-$$5.75</item>
+        <item>*Snacks</item>
+        <item>Trail Mix-$$0.85</item>
+        <item>Route 11 Chips-$$1.00</item>
+        <item>Jelly Beans-$$1.00</item>
+        <item>Chocolate Covered\nEspresso Beans-$$1.00</item>
+    </string-array>
+    <string-array name="smoothies">
+        <item>*Milkshakes-#All shakes:
+            \nSmall $2.80
+            \nLarge $3.50
+            \nAdd-ins +$0.40 each:
+            \n(snickers, m&amp;ms, reeses, heath toffee, hersheys syrup)</item>
+        <item>Any Flavor of Ice Cream</item>
+        <item>*Smoothies
+                -#All smoothies:
+                \nSmall $2.50
+                \nLarge $3.00</item>
+        <item>Extreme Peach</item>
+        <item>Mango Mania</item>
+        <item>Mandarin Orange</item>
+        <item>Strawberry Banana</item>
+        <item>Strawberry Bomb</item>
+        <item>Wildberry Blast</item>
+        <item>Pina Colada</item>
+    </string-array>
+
+</resources>

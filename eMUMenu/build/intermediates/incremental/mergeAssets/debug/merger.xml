@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="5.2.08" >
+        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\5.2.08\assets" />
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\EMUMenu\tabLib\unspecified\assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\src\main\assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\src\debug\assets" />
+    </dataSet>
+
+</merger>

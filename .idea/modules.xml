@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EMUMenu.iml" filepath="$PROJECT_DIR$/EMUMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eMUMenu/eMUMenu.iml" filepath="$PROJECT_DIR$/eMUMenu/eMUMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabLib/tabLib.iml" filepath="$PROJECT_DIR$/tabLib/tabLib.iml" />
+    </modules>
+  </component>
+</project>
+

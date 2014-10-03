@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="den_breakfast">
+        <item>*Breakfast</item>
+        <item>Big Breakfast-$$5.69</item>
+        <item>Breakfast Wrap-$$4.19</item>
+        <item>Breakfast Quesadilla-$$4.19</item>
+        <item>Sausage, Gravy and Biscuit-$$2.29</item>
+        <item>Hashbrowns-$$1.99</item>
+        <item>Oatmeal-$$1.99</item>
+        <item>Cinnamon Roll-$$1.69</item>
+        <item>Bagel-$$1.69</item>
+        <item>Muffin-$$1.69</item>
+        <item>Toast-$$0.99</item>
+        <item>Eggs-$$1.09</item>
+        <item>Egg Sandwich-$$2.19</item>
+        <item>"      w/ Cheese-$$2.39"</item>
+        <item>"      w/ Choice of Meat-$$3.29"</item>
+        <item>*Drinks</item>
+        <item>Large Coffee-$$2.49</item>
+        <item>Small Coffee-$$1.89</item>
+        <item>Tea-$$1.39</item>
+        <item>Fountain Drink-$$1.99</item>
+        <item></item>
+    </string-array>
+    <string-array name="den_subs">
+        <item>*Subs</item>
+        <item>Ham-$$4.39</item>
+        <item>Turkey-$$4.39</item>
+        <item>Veggie-$$4.69</item>
+        <item>Philly-style Steak-$$4.69</item>
+        <item>Philly-style Chicken-$$4.69</item>
+        <item>Chicken Parmesan-$$4.69</item>
+        <item></item>
+        <item>*Pitas</item>
+        <item>Hummus-$$3.69</item>
+        <item>Tuna Salad-$$4.39</item>
+        <item>Chicken Salad-$$4.39</item>
+        <item></item>
+    </string-array>
+    <string-array name="den_sandwiches">
+        <item>*Sandwiches</item>
+        <item>Hotdog-$$1.99</item>
+        <item>Grilled Cheese-$$1.99</item>
+        <item>Hamburger-$$2.69</item>
+        <item>Grilled Ham &amp; Cheese-$$2.69</item>
+        <item>Cheeseburger-$$2.89</item>
+        <item>Chicken Fillet-$$2.89</item>
+        <item>Garden Burger-$$3.39</item>
+        <item>Mushroom Swiss Burger-$$3.39</item>
+        <item>Bacon Cheddar Burger-$$3.99</item>
+        <item>Grilled Chicken-$$3.39</item>
+        <item>BLT-$$3.69</item>
+        <item>Beef BBQ-$$3.69</item>
+        <item>Tuna Salad-$$3.69</item>
+        <item>Chicken Salad-$$3.69</item>
+        <item>Club-$$4.39</item>
+        <item>Chicken Club-$$4.69</item>
+        <item></item>
+    </string-array>
+    <string-array name="den_fryer">
+        <item>*Fryer</item>
+        <item>Corndog Nuggets-$$2.99</item>
+        <item>Chicken Nuggets-$$2.99</item>
+        <item>Chicken Tenders-$$3.69</item>
+        <item>"     w/ Fies-$$4.69"</item>
+        <item>Candy &amp; Chips-$$1.09</item>
+        <item></item>
+        <item>*Salads</item>
+        <item>Salad Bar-$$4.99</item>
+        <item>Caesar-$$4.19</item>
+        <item>Chicken Caesar-$$5.39</item>
+        <item>Grilled Chicken-$$5.39</item>
+        <item>Taco-$$5.99</item>
+        <item></item>
+    </string-array>
+    <string-array name="den_wraps">
+        <item>*Wraps</item>
+        <item>Veggie-$$3.69</item>
+        <item>Taco-$$4.69</item>
+        <item>Steak-$$4.69</item>
+        <item>Chicken-$$4.69</item>
+        <item>Chicken Caesar-$$4.69</item>
+        <item>Tuna Salad-$$4.69</item>
+        <item>Chicken Salad-$$4.69</item>
+        <item></item>
+        <item>*Quesadillas</item>
+        <item>Cheese-$$3.19</item>
+        <item>Steak-$$4.19</item>
+        <item>Chicken-$$4.19</item>
+        <item></item>
+    </string-array>
+    <string-array name="den_pizza">
+        <item>*Pizza</item>
+        <item>Cheese-$$2.19</item>
+        <item>Topped-$$2.69</item>
+        <item></item>
+        <item>*Sides</item>
+        <item>French Fries-$$1.99</item>
+        <item>Sweet Potato Fries-$$1.99</item>
+        <item>Curly Fries-$$2.19</item>
+        <item>Spuds-$$2.19</item>
+        <item>Onion Rings-$$2.69</item>
+        <item>Cheese Sticks-$$4.19</item>
+        <item>Soup-$$2.99</item>
+        <item>Soup &amp; Salad-$$6.59</item>
+        <item>Hummus Pretzel-$$2.99</item>
+        <item>Greek Yogurt-$$1.59</item>
+        <item></item>
+        <item>*Cookies</item>
+        <item>Small-$$0.79</item>
+        <item>Large-$$1.69</item>
+        <item></item>
+    </string-array>
+
+</resources>

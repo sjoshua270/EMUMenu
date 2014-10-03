@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="den_times">
+        <item>*Monday-Friday</item>
+        <item>7:30am-10pm</item>
+        <item>*Saturday</item>
+        <item>Closed</item>
+        <item>*Sunday</item>
+        <item>6pm-10pm</item>
+        <item>*Transfer Meals</item>
+        <item>Lunch: 12pm-3pm\nDinner: 5:30pm-8pm</item>
+    </string-array>
+    <string-array name="caf_times">
+        <item>*Monday-Friday</item>
+        <item>7am-7pm</item>
+        <item>*Saturday</item>
+        <item>10:30am-1pm\n5pm-6pm</item>
+        <item>*Sunday</item>
+        <item>8:15am-9am\n11:30am-1pm\n5pm-6pm</item>
+    </string-array>
+    <string-array name="lib_times">
+        <item>*Monday-Thursday</item>
+        <item>7:45am-11:30pm</item>
+        <item>*Saturday</item>
+        <item>Noon-6pm</item>
+        <item>*Sunday</item>
+        <item>2pm-11:30pm</item>
+    </string-array>
+    <string-array name="fit_times">
+        <item>*Monday-Thursday</item>
+        <item>6am-9pm</item>
+        <item>*Friday</item>
+        <item>Closes at 8:30pm</item>
+        <item>*Saturday</item>
+        <item>9am-5pm</item>
+        <item>*Sunday</item>
+        <item>4pm-8pm</item>
+    </string-array>
+    <string-array name="post_times">
+        <item>*Monday-Friday</item>
+        <item>9am-4pm</item>
+    </string-array>
+    <string-array name="cg_times">
+        <item>*Monday-Thursday</item>
+        <item>9am-4pm\n8pm-Midnight</item>
+        <item>*Friday</item>
+        <item>9am-4pm\n8pm-1am</item>
+        <item>*Saturday</item>
+        <item>8pm-1am</item>
+        <item>*Sunday</item>
+        <item>8pm-Midnight</item>
+    </string-array>
+    <string-array name="business_times">
+        <item>*Monday-Friday</item>
+        <item>9am-4pm</item>
+    </string-array>
+    <string-array name="gameroom_times">
+        <item>*Sunday-Thursday</item>
+        <item>4pm-11pm</item>
+        <item>*Friday</item>
+        <item>4pm-1am</item>
+        <item>*Saturday</item>
+        <item>7pm-1am</item>
+    </string-array>
+</resources>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:edu.emu.emuappslite="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refresh"
+        edu.emu.emuappslite:showAsAction="always"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/refresh">
+    </item>
+
+</menu><!-- From: file:/C:/Users/sjoshua270/AndroidStudioProjects/EMUMenu/eMUMenu/src/main/res/menu/menu.xml -->
