@@ -1,13 +1,12 @@
 package edu.emuapps.emuapplite;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -114,7 +113,29 @@ public class MenuActivity extends ActionBarActivity {
 		getSupportActionBar().setHomeButtonEnabled(true);
 
 		loadCaf();
+		setTheme();
 		sendAnalytics();
+	}
+
+	private void setTheme() {
+		switch (mode) {
+			case 0:
+				// Cafeteria
+				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.light_blue_400)));
+				break;
+			case 1:
+				// Royals Den
+				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.purple_400)));
+				break;
+			case 2:
+				// Common Grounds
+				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.brown_400)));
+				break;
+			case 3:
+				// Hours
+				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.amber_400)));
+				break;
+		}
 	}
 
 	/**
@@ -135,7 +156,7 @@ public class MenuActivity extends ActionBarActivity {
 		return mTrackers.get(trackerId);
 	}
 
-	public void sendAnalytics(){
+	public void sendAnalytics() {
 		Tracker t = getTracker(
 				TrackerName.APP_TRACKER);
 
@@ -351,6 +372,7 @@ public class MenuActivity extends ActionBarActivity {
 			loadCaf();
 		}
 		populatePager(mode);
+		setTheme();
 		mDrawerLayout.closeDrawer(mDrawerList);
 	}
 
