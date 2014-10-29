@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="navigation_list">
+        <item>Cafeteria</item>
+        <item>Royals Den</item>
+        <item>Common Grounds</item>
+        <item>Hours</item>
+    </string-array>
+    <string-array name="days_list">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string-array name="den_list">
+        <item>Breakfast &amp; Drinks</item>
+        <item>Subs &amp; Pitas</item>
+        <item>Sandwiches</item>
+        <item>Wraps &amp; Quesadillas</item>
+        <item>Fryer &amp; Salads</item>
+        <item>Pizza &amp; Sides</item>
+    </string-array>
+    <string-array name="common_g_list">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Combos</item>
+        <item>Smoothies &amp; Shakes</item>
+    </string-array>
+    <string-array name="place_list">
+        <item>Cafeteria</item>
+        <item>Royals Den</item>
+        <item>Library</item>
+        <item>Fitness Center</item>
+        <item>Post Office</item>
+        <item>Common Grounds</item>
+        <item>Business Office</item>
+        <item>Game Room</item>
+    </string-array>
+    <string-array name="favorites_title">
+        <item>Favorites</item>
+    </string-array>
+    
+
+</resources>

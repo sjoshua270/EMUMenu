@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cardview_margin"
+        card_view:cardCornerRadius="@dimen/cardview_default_radius">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginTop="@dimen/text_margin"
+                android:id="@+id/title"
+                android:text="Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/title_size"/>
+
+            <TextView
+                android:layout_marginLeft="@dimen/text_margin"
+                android:id="@+id/subtitle"
+                android:text="Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/subtitle_size"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_margin="@dimen/divider_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/light_blue_500"/>
+
+            <edu.emuapps.emuapplite.NonScrollListView
+                android:clickable="false"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+<!-- From: file:/C:/Users/sjoshua270/Documents/Development/EMUMenu%20(Supports%20API%209+)/eMUMenu/src/main/res/layout/card.xml -->
