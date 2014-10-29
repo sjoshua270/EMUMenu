@@ -2,46 +2,124 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-2a1111e159d3075327e868ff5c60a1001ab34836.jar"
-        jar="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\classes-e86e751cbd3821be91782e67381c2e7f8fcc3195.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+        revision="21.0.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-d62e32be6fa5b806243db84c136fbcfea69fa60b.jar"
-        jar="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\5.2.08\classes.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-a1dc5def9da28948c183e33683a5f3d5aa2394c1.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="1ed7a7a05185651f9af41ad93711cb96b66f331c"/>
+        revision="21.0.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-9966e99c5719711dd071b357147bf0a45fc3f6fd.jar"
-        jar="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\classes.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-2d6a0cfd3e6e12ea78cbbca9717604560ee1099d.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\classes.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+        revision="21.0.1"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-1bdc205aecc51582a79417b498e65c8cb4e0dc75.jar"
-        jar="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\EMUMenu\tabLib\unspecified\classes.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-c310a0c0895f9dde29694458f757db66a13be7f8.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="03b8e1c6e79b77714d682aae8a3fb182c39240e8"/>
+        revision="21.0.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-cdb3af117e70476c654f4f8b4cd762d6333f4b07.jar"
-        jar="C:\Users\sjoshua270\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-eb6921270bd1cfe6c96475af0023745455e6e7ee.jar"
+        jar="C:\Users\sjoshua270\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+        revision="21.0.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-9afe67e8da5769db98ee443e6294701536969b1c.jar"
-        jar="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\classes-946cda5909c03604b10d2bf5014eeb05a7ab1630.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.0\classes.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+        revision="21.0.1"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2"/>
     <item
-        dex="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\jsoup-1.7.1-6a1fab1c778b4867478cb54ea97869edc8c9e249.jar"
-        jar="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\libs\jsoup-1.7.1.jar"
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\classes-44bf42a27d0abc7bc4822ff1cb03ddd0ee22427a.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"
         jumboMode="false"
-        revision="20.0.0"
+        revision="21.0.1"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\jsoup-1.7.1-3f758a4f0e76a200f8b86fc78df8e1a0dc8817ac.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\libs\jsoup-1.7.1.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-f63cb7bf6d7eeaf2963453b8cf66dadcd7655421.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-b6ade97377688fc7b30c80e38e95ffe3fa95b59a.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\release\classes-f3fa418197b5149d00f338ebdfc425e8e4bf615a.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\EMUMenu (Supports API 9+)\tabLib\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="baa54dd9f6aff8da25878024bcdaa18fb71b85d0"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\classes-f3fa418197b5149d00f338ebdfc425e8e4bf615a.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\EMUMenu (Supports API 9+)\tabLib\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="baa54dd9f6aff8da25878024bcdaa18fb71b85d0"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-51fb98d06c6d9b4c984c53356b551297433d64df.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\classes-e0353f9031afaa74e3b204dcefd1a1f32d9a9dd4.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\release\classes-da5efadb63cdcf15af7d97dbca7055b5bebbb29d.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\release\jsoup-1.7.1-84f3f77f713fdd687655117840dc487080f5aac2.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\libs\jsoup-1.7.1.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\classes-da5efadb63cdcf15af7d97dbca7055b5bebbb29d.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\classes-541747a7131326d6c4e1a22bac560428a1462a6f.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\EMUMenu\tabLib\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="a995680228c70c15d1aa161b3393f33df8ed7a55"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-915106010831f00a0ae3f0acf5c40047d9c69f36.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu\eMUMenu\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\intermediates\pre-dexed\debug\jsoup-1.7.1-84f3f77f713fdd687655117840dc487080f5aac2.jar"
+        jar="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\libs\jsoup-1.7.1.jar"
+        jumboMode="false"
+        revision="21.0.0"
         sha1="99351550d1fa2e8147319dbafd3f3a79d4f4c6e5"/>
 
 </pre-dex-items>

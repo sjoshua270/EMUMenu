@@ -5,23 +5,27 @@
     '*' Makes an item bold and underlined
     '#' Makes an item subtext
     '$' Makes an item align to the right
-    You MUST use '-' in front of each
+    You MUST use '-' in front of each
+
+
+
+
     -->
 
     <string-array name="drinks">
         <item>*House Specials-#Any prices unspecified:\nSmall  $3.25\nLarge  $3.90</item>
-        <item>Ground Shaker-#(espresso, caramel, vanilla ice cream)</item>
-        <item>Indian Elephant-#(chai, vanilla ice cream, nutmeg, cinnamon)</item>
-        <item>Valley Turnpike-#(apple juice, caramel, cinnamon, vanilla ice cream)</item>
-        <item>Salty Caramel-#(vanilla ice cream, caramel, salt)</item>
-        <item>Siberian Tiger-#(vanilla ice cream, espresso, chai, cayenne pepper)</item>
-        <item>Nutty Professor-#(vanilla ice cream, espresso, Reese\'s)</item>
-        <item>Flying Squirrel-#(vanilla ice cream, hazel syrup, espresso)</item>
-        <item>London Fog-#(earl grey, vanilla syrup)-$Small $2.60\nLarge $2.85</item>
-        <item>Sweet Africa-#(African Nectar, vanilla syrup)-$Small $2.60\nLarge $2.85</item>
-        <item>Dirty Chai-#(espresso, chai)-$Small $3.35\nLarge $3.65</item>
+        <item>Ground Shaker</item>
+        <item>Indian Elephant</item>
+        <item>Valley Turnpike</item>
+        <item>Salty Caramel</item>
+        <item>Siberian Tiger</item>
+        <item>Nutty Professor</item>
+        <item>Flying Squirrel</item>
+        <item>London Fog-$Small $2.60\nLarge $2.85</item>
+        <item>Sweet Africa-$Small $2.60\nLarge $2.85</item>
+        <item>Dirty Chai-$Small $3.35\nLarge $3.65</item>
         <item>*Hot Drinks</item>
-        <item>Coffee in House-#(unlimited refills)-$$2.10</item>
+        <item>Coffee in House-$$2.10</item>
         <item>Coffee-$Small $1.60\nLarge $1.90</item>
         <item>Latte-$Small $3.00\nLarge $3.35</item>
         <item>Cappuccino-$Small $3.00\nLarge $3.35</item>
@@ -43,8 +47,8 @@
         <item>Coffee Float-$$1.75</item>
         <item>Milk-$$1.15</item>
         <item>Soy Milk-$$1.15</item>
-        <item>Soft Drinks - can-#(coke, diet coke, mountain dew, root beer, dr. pepper)-$$0.75</item>
-        <item>Soft Drinks - jarritos-#(pineapple, mandarin, mango, sangria)-$$1.25</item>
+        <item>Soft Drinks - can-$$0.75</item>
+        <item>Soft Drinks - jarritos-$$1.25</item>
         <item>Red Bull-$$2.00</item>
         <item>Menno Tea-$$2.00</item>
         <item>Juice-$$1.15</item>
@@ -65,8 +69,8 @@
     </string-array>
     <string-array name="combos_snacks">
         <item>*Combos</item>
-        <item>Bakery Combo-#(pair any baked good with house coffee, tea, juice, or milk)-$$2.95</item>
-        <item>Sandwich Combo-#(sandwich, side, &amp; drink)-$$5.75</item>
+        <item>Bakery Combo-$$2.95</item>
+        <item>Sandwich Combo-$$5.75</item>
         <item>*Snacks</item>
         <item>Trail Mix-$$0.85</item>
         <item>Route 11 Chips-$$1.00</item>

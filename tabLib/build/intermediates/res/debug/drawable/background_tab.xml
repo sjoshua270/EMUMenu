@@ -5,4 +5,4 @@
     <item android:state_focused="true" android:drawable="@color/background_tab_pressed"/>
     <item android:drawable="@android:color/transparent"/>
 
-</selector><!-- From: file:/C:/Users/sjoshua270/AndroidStudioProjects/EMUMenu/tabLib/src/main/res/drawable/background_tab.xml -->
+</selector><!-- From: file:/C:/Users/sjoshua270/Documents/Development/EMUMenu%20(Supports%20API%209+)/tabLib/src/main/res/drawable/background_tab.xml -->

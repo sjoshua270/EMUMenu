@@ -1,29 +1,27 @@
 package edu.emuapps.emuapplite;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -51,10 +49,13 @@ public class MenuActivity extends ActionBarActivity {
 	private String URL;
 	private String[] titles;
 	private DrawerLayout mDrawerLayout;
+	private Toolbar toolbar;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private StorageManager sm;
-	private MenuPagerAdapter adapter;
+	List<Page> pages;
+	MyPagerAdapter adapter;
+	private PagerSlidingTabStrip tabs;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,16 +71,19 @@ public class MenuActivity extends ActionBarActivity {
 		mode = 0;
 		//Section titles
 		titles = this.getResources().getStringArray(R.array.navigation_list);
-
 		// URL of the site
 		URL = "http://goo.gl/T8bwaO";
 
+		toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerList = (ListView) findViewById(R.id.left_drawer);
+		pager = (ViewPager) findViewById(R.id.menu_pager);
 
 		// Set the adapter for the list view
 		mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-		                                                R.layout.drawer_list_item,
+		                                                android.R.layout.simple_list_item_1,
 		                                                this.getResources().getStringArray(R.array.navigation_list)));
 		// Set the list's click listener
 		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
@@ -87,55 +91,40 @@ public class MenuActivity extends ActionBarActivity {
 		mDrawerToggle = new ActionBarDrawerToggle(
 				this,
 				mDrawerLayout,
-				R.drawable.ic_drawer,
+				toolbar,
 				R.string.drawer_open,
 				R.string.drawer_close
 		) {
 			// Called when a drawer has settled in a completely closed state.
-			public void onDrawerClosed(View view) {
-				super.onDrawerClosed(view);
-				getSupportActionBar().setTitle(titles[mode]);
+			public void onDrawerClosed(View drawerView) {
+				super.onDrawerClosed(drawerView);
 				supportInvalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
 			}
 
 			// Called when a drawer has settled in a completely open state.
 			public void onDrawerOpened(View drawerView) {
 				super.onDrawerOpened(drawerView);
-				getSupportActionBar().setTitle(mContext.getResources().getString(R.string.drawer_open));
 				supportInvalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+			}
+
+			public void onDrawerSlide(View drawerView, float slideOffSet) {
+				super.onDrawerSlide(drawerView, slideOffSet);
+				if (slideOffSet > 0.5)
+					toolbar.setTitle(mContext.getResources().getString(R.string.drawer_open));
+				else
+					toolbar.setTitle(titles[mode]);
 			}
 		};
 
 		// Set the drawer toggle as the DrawerListener
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setHomeButtonEnabled(true);
-
 		loadCaf();
-		setTheme();
+		toolbar.setBackgroundColor(getResources().getColor(R.color.light_blue_500));
+		toolbar.setTitleTextColor(getResources().getColor(R.color.light_blue_50));
+		tabs.setIndicatorColorResource(R.color.light_blue_300);
+		tabs.setBackgroundColor(getResources().getColor(R.color.light_blue_50));
 		sendAnalytics();
-	}
-
-	private void setTheme() {
-		switch (mode) {
-			case 0:
-				// Cafeteria
-				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.light_blue_400)));
-				break;
-			case 1:
-				// Royals Den
-				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.purple_400)));
-				break;
-			case 2:
-				// Common Grounds
-				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.brown_400)));
-				break;
-			case 3:
-				// Hours
-				getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.amber_400)));
-				break;
-		}
 	}
 
 	/**
@@ -181,7 +170,7 @@ public class MenuActivity extends ActionBarActivity {
 		long timestamp = sm.getLong("TIMESTAMP");
 		String data = sm.getString("DATA");
 
-		if (data != "") {
+		if (!data.equals("")) {
 			// If the data is more than a day old, get new data
 			if ((new Date().getTime() - timestamp) > 86400000) {
 				new getDoc().execute(URL);
@@ -196,45 +185,6 @@ public class MenuActivity extends ActionBarActivity {
 			new getDoc().execute(URL);
 	}
 
-	/**
-	 * Gets the data for each meal and day
-	 *
-	 * @param meal Breakfast, Lunch, Dinner (1,3,5)
-	 * @param day  Day of the week
-	 * @return
-	 */
-	public ArrayList<String> getMealData(int meal, int day) {
-		ArrayList<String> food = new ArrayList<String>();
-		//Add food items from obtained mealDat
-		if (mealData != null) {
-			Element aMeal = mealData.children().get(meal).child(day);
-			for (Element item : aMeal.children()) {
-				food.add(item.text());
-			}
-		}
-		else {
-			food.add(mContext.getResources().getString(R.string.no_connection));
-		}
-		return food;
-	}
-
-	public void favorite(View v) {
-		if (mode == 0 || mode == 4) {
-			TextView tv = (TextView) ((ViewGroup) v).getChildAt(0);
-			String s = tv.getText().toString();
-			List<String> favs = sm.getArray("FAVORITES");
-			CheckBox cb = (CheckBox) (((ViewGroup) v).getChildAt(3));
-			cb.toggle();
-			if (!cb.isChecked() && favs.contains(s)) {
-				favs.remove(s);
-			}
-			if (cb.isChecked() && !favs.contains(s)) {
-				favs.add(s);
-			}
-
-			sm.putArray(favs, "FAVORITES");
-		}
-	}
 
 	/**
 	 * Fills up the respective List<String> of items for each category
@@ -242,117 +192,148 @@ public class MenuActivity extends ActionBarActivity {
 	 * @param mode Determines which section of the app
 	 * @return List of Strings to populate the views
 	 */
-	private List<String> getItems(int mode) {
-		switch (mode) {
-			case 0:
-				return cafeteria();
-			case 1:
-				return royalsDen();
-			case 2:
-				return commonGrounds();
-			case 3:
-				return hours();
-			case 4:
-				return favs();
-		}
-		return null;
+	private List<Page> getItems(int mode) {
+		if (mode == 0) return cafeteria();
+		return getPages(mode);
 	}
 
 	/**
 	 * Fills the cafeteria list
 	 *
-	 * @return
+	 * @return Pages for the caf
 	 */
-	private ArrayList<String> cafeteria() {
-		ArrayList<String> caf = new ArrayList<String>();
-		for (int page = 1; page < 7; page++) {
-			caf.add("start_of_section");
-			caf.add("*Breakfast");
-			caf.addAll(getMealData(1, page));
-			caf.add("*Lunch");
-			caf.addAll(getMealData(3, page));
-			caf.add("*Dinner");
-			caf.addAll(getMealData(5, page));
-			caf.add("end_of_section");
+	private List<Page> cafeteria() {
+		List<Page> pages = new ArrayList<Page>();
+		List<Card> cards;
+		String[] pageTitles = getResources().getStringArray(R.array.days_list);
+		String[] cardTitles = {
+				"Breakfast",
+				"Lunch",
+				"Dinner"
+		};
+		String[] times = {"7:00AM - 9:00AM", "11:00AM - 1:00PM", "5:00PM - 7:00PM"};
+		for (int page = 0; page < pageTitles.length; page++) {
+			cards = new ArrayList<Card>();
+			for (int meal = 0; meal < cardTitles.length; meal++) {
+				cards.add(new Card(cardTitles[meal], times[meal], getMealData(meal * 2 + 1, page + 1)));
+			}
+			pages.add(new Page(pageTitles[page], cards));
 		}
-		return caf;
+		return pages;
 	}
 
-
-	private ArrayList<String> royalsDen() {
-		ArrayList<String> den = new ArrayList<String>();
-		den.add("start_of_section");
-		den.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_breakfast)));
-		den.add("end_of_section");
-		den.add("start_of_section");
-		den.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_subs)));
-		den.add("end_of_section");
-		den.add("start_of_section");
-		den.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_sandwiches)));
-		den.add("end_of_section");
-		den.add("start_of_section");
-		den.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_wraps)));
-		den.add("end_of_section");
-		den.add("start_of_section");
-		den.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_fryer)));
-		den.add("end_of_section");
-		den.add("start_of_section");
-		den.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_pizza)));
-		den.add("end_of_section");
-
-		return den;
+	/**
+	 * Gets the data for each meal and day
+	 *
+	 * @param meal Breakfast, Lunch, Dinner (1,3,5)
+	 * @param day  Day of the week
+	 * @return Pairs of meal items
+	 */
+	public List<Pair> getMealData(int meal, int day) {
+		List<Pair> pairs = new ArrayList<Pair>();
+		//Add pairs items from obtained mealDat
+		if (mealData != null) {
+			Element aMeal = mealData.children().get(meal).child(day);
+			for (Element item : aMeal.children()) {
+				pairs.add(new Pair(item.text(), ""));
+			}
+		}
+		else {
+			pairs.add(new Pair(mContext.getResources().getString(R.string.no_connection), ""));
+		}
+		return pairs;
 	}
 
-	private ArrayList<String> commonGrounds() {
-		ArrayList<String> cg = new ArrayList<String>();
-		cg.add("start_of_section");
-		cg.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.drinks)));
-		cg.add("end_of_section");
-		cg.add("start_of_section");
-		cg.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.food)));
-		cg.add("end_of_section");
-		cg.add("start_of_section");
-		cg.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.combos_snacks)));
-		cg.add("end_of_section");
-		cg.add("start_of_section");
-		cg.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.smoothies)));
-		cg.add("end_of_section");
-
-		return cg;
-	}
-
-	private ArrayList<String> hours() {
-		ArrayList<String> hours = new ArrayList<String>();
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.caf_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.den_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.lib_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.fit_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.post_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.cg_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.business_times)));
-		hours.add("end_of_section");
-		hours.add("start_of_section");
-		hours.addAll(Arrays.asList(mContext.getResources().getStringArray(R.array.gameroom_times)));
-		hours.add("end_of_section");
-
-		return hours;
-	}
-
-	private List<String> favs() {
-		return sm.getArray("FAVORITES");
+	private List<Page> getPages(int mode) {
+		List<Page> pages = new ArrayList<Page>();
+		List<Card> cards;
+		List<String> data;
+		int[] lists = new int[0];
+		String[] pageTitles = new String[0];
+		Resources res = getResources();
+		int[] denLists = {
+				R.array.den_breakfast,
+				R.array.den_subs,
+				R.array.den_sandwiches,
+				R.array.den_wraps,
+				R.array.den_fryer,
+				R.array.den_pizza
+		};
+		int[] cGLists = {
+				R.array.drinks,
+				R.array.food,
+				R.array.combos_snacks,
+				R.array.smoothies
+		};
+		int[] hoursLists = {
+				R.array.caf_times,
+				R.array.den_times,
+				R.array.lib_times,
+				R.array.fit_times,
+				R.array.post_times,
+				R.array.cg_times,
+				R.array.business_times,
+				R.array.gameroom_times
+		};
+		switch (mode) {
+			case 1:
+				pageTitles = res.getStringArray(R.array.den_list);
+				lists = denLists;
+				break;
+			case 2:
+				pageTitles = res.getStringArray(R.array.common_g_list);
+				lists = cGLists;
+				break;
+			case 3:
+				pageTitles = res.getStringArray(R.array.place_list);
+				lists = hoursLists;
+				break;
+		}
+		for (int page = 0; page < pageTitles.length; page++) { // Fills out per page
+			cards = new ArrayList<Card>();
+			data = Arrays.asList(res.getStringArray(lists[page])); // Get the list for the page
+			String title;
+			for (int itemCount = 0; itemCount < data.size(); itemCount++) { // Get each item
+				List<Pair> items = new ArrayList<Pair>();
+				if (data.get(itemCount).contains("*")) { // This is to find a "title"
+					String subTitle = "";
+					int i = 0;
+					if (data.get(itemCount).contains("-#")) { // Subtitle
+						while (data.get(itemCount).charAt(i) != '#') { // Find out where the '#' is
+							i++;
+						}
+						title = data.get(itemCount).substring(1, i - 1);
+						subTitle = data.get(itemCount).substring(i + 1, data.get(itemCount).length());
+					}
+					else {
+						title = data.get(itemCount).substring(1, data.get(itemCount).length());
+					}
+					int offSet = 1;
+					String item = data.get(itemCount + offSet);
+					// While none of the other items have a '*', add them to the data
+					while (itemCount + offSet + 1 != data.size() && !item.contains("*")) {
+						if (item.contains("-$")) { // Price
+							i = 0;
+							while (item.charAt(i) != '$') { // Find out where the '$' is
+								i++;
+							}
+							items.add(new Pair(item.substring(0, i - 1), item.substring(i + 1, item.length())));
+						}
+						else {
+							items.add(new Pair(item, ""));
+						}
+						offSet++;
+						item = data.get(itemCount + offSet);
+					}
+					if (itemCount + offSet < data.size()) {
+						itemCount += offSet;
+					}
+					cards.add(new Card(title, subTitle, items));
+				}
+			}
+			pages.add(new Page(pageTitles[page], cards));
+		}
+		return pages;
 	}
 
 	@Override
@@ -361,37 +342,31 @@ public class MenuActivity extends ActionBarActivity {
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
+	private class DrawerItemClickListener implements ListView.OnItemClickListener {
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+			selectItem(position);
+		}
+	}
+
 	private void selectItem(int position) {
-		mDrawerList.setItemChecked(position, true);
 		mode = position;
 		// Highlight the selected item, update the title, and close the drawer
 		mDrawerList.setItemChecked(position, true);
-		refreshVisible = false;
 		if (position == 0) {
 			refreshVisible = true;
 			loadCaf();
 		}
+		else refreshVisible = false;
 		populatePager(mode);
-		setTheme();
 		mDrawerLayout.closeDrawer(mDrawerList);
 	}
 
+	@SuppressLint("NewApi")
 	private void populatePager(int mode) {
-
-		List<String> items = new ArrayList<String>();
-		items = getItems(mode);
-
-		adapter = new MenuPagerAdapter(sm, mode, items, mContext);
-
-		pager = (ViewPager) findViewById(R.id.menu_pager);
-
+		pages = getItems(mode);
+		adapter = new MyPagerAdapter(mContext, pages);
 		pager.setAdapter(adapter);
-
-		// Bind the tabs to the ViewPager
-		PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
-		//Color of the tabs
-		tabs.setIndicatorColor(Color.parseColor("#60a6bc"));
-		//And... Couple
 		tabs.setViewPager(pager);
 
 		int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
@@ -401,12 +376,13 @@ public class MenuActivity extends ActionBarActivity {
 		if (mode == 0)
 			pager.setCurrentItem(day);
 
-		pager.setOffscreenPageLimit(6);
+		pager.setOffscreenPageLimit(10);
 		pager.setVisibility(View.VISIBLE);
 
 		AlphaAnimation anim = new AlphaAnimation(0.0f, 1.0f);
-		anim.setDuration(500);
+		anim.setDuration(1000);
 		pager.startAnimation(anim);
+
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -433,6 +409,7 @@ public class MenuActivity extends ActionBarActivity {
 			new getDoc().execute(URL);
 			pager.startAnimation(aa);
 			pager.setVisibility(View.GONE);
+
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -494,10 +471,4 @@ public class MenuActivity extends ActionBarActivity {
 		}
 	}
 
-	private class DrawerItemClickListener implements ListView.OnItemClickListener {
-		@Override
-		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			selectItem(position);
-		}
-	}
 }

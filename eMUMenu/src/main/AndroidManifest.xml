@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.emuapps.emuapplite"
-    android:versionCode="33"
-    android:versionName="1.971" >
+    android:versionCode="34"
+    android:versionName="1.99" >
 
     <uses-sdk
         android:minSdkVersion="9"
@@ -12,10 +12,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:theme="@style/Theme.AppCompat.Light"
-        android:allowBackup="true"
+        android:theme="@style/Theme.MyTheme"
+        android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:allowBackup="true" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="4" />
@@ -29,7 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name="edu.emuapps.emuapplite.AlarmReceiver" />
     </application>
 
 </manifest>

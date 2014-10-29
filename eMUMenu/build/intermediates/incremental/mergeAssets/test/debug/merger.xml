@@ -2,7 +2,7 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\src\androidTest\assets" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\src\androidTest\assets" />
     </dataSet>
 
 </merger>

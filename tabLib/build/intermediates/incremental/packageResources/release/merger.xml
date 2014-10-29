@@ -2,14 +2,14 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\src\main\res" >
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\src\main\res" >
             <file
                 name="background_tab"
-                path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\src\main\res\drawable\background_tab.xml"
+                path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\src\main\res\drawable\background_tab.xml"
                 qualifiers=""
                 type="drawable" />
             <file
-                path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\src\main\res\values\attrs.xml"
+                path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\src\main\res\values\attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="PagerSlidingTabStrip" >
                     <attr
@@ -48,17 +48,17 @@
                 </declare-styleable>
             </file>
             <file
-                path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\src\main\res\values\colors.xml"
+                path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\src\main\res\values\colors.xml"
                 qualifiers="" >
                 <color name="background_tab_pressed" >#6633B5E5
                 </color>
             </file>
         </source>
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\build\generated\res\rs\release" />
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\build\generated\res\generated\release" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\build\generated\res\rs\release" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\build\generated\res\generated\release" />
     </dataSet>
     <dataSet config="release" >
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\tabLib\src\release\res" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu\tabLib\src\release\res" />
     </dataSet>
 
 </merger>

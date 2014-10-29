@@ -2,9 +2,9 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\src\androidTest\res" />
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\generated\res\rs\test\debug" />
-        <source path="C:\Users\sjoshua270\AndroidStudioProjects\EMUMenu\eMUMenu\build\generated\res\generated\test\debug" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\src\androidTest\res" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\generated\res\rs\test\debug" />
+        <source path="C:\Users\sjoshua270\Documents\Development\EMUMenu (Supports API 9+)\eMUMenu\build\generated\res\generated\test\debug" />
     </dataSet>
 
 </merger>
